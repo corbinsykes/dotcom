@@ -63,12 +63,9 @@ export class LandingComponent implements OnInit {
 
     resetWord() {
         this.isBlinking = true;
-
         this.textColor = this.colors[0];
         this.typeWord(0);
         this.isBlinking = false;
-        // setTimeout(() => {
-        // }, 4000);
     }
 
     typeWord(index) {
