@@ -1,4 +1,7 @@
 @import '../styles/base/base';
+///////////////////////
+// 0. Site Container //
+///////////////////////
 
 .site {
     height: 100vh;
@@ -11,6 +14,11 @@
     }
 }
 
+////////////////
+// 1. Contact //
+////////////////
+
+// Contact Menu
 .menu {
     display: flex;
     position: fixed;
@@ -27,6 +35,7 @@
     }
 }
 
+// Contact Items
 .work {
     position: relative;
     cursor: pointer;
@@ -52,6 +61,7 @@
     }
 }
 
+// Contact Item Highlight
 .active {
     position: absolute;
     top: calc(50% - 0.625rem);
@@ -63,6 +73,10 @@
     opacity: 0.975;
     transition: all $transition-timing cubic-bezier(0.47, 0, 0.745, 0.715);
 }
+
+/////////////////////////
+// 2. Header && Footer //
+/////////////////////////
 
 .header,
 .footer {
@@ -104,17 +118,14 @@
     border-top: 2px solid $white;
 }
 
+///////////////////
+// 3. Page Links //
+///////////////////
+
 .link {
     color: $white;
 
     & + & {
         margin-left: 0.75rem;
     }
-}
-
-.article {
-    position: relative;
-	height: 100vh;
-	width: 100%;
-    transition: all $transition-timing ease;
 }
