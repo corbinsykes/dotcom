@@ -9,8 +9,7 @@
             <a
                 class="link"
                 href="mailto:corbin.sykes@gmail.com"
-                subject="Greetings and Salutations, Corbin!"
-                target="_blank">
+                subject="Greetings and Salutations, Corbin!">
                 <div
                     class="active"
                     [style.backgroundColor]="getTextColor()">
@@ -68,7 +67,7 @@
     <p
         (click)="toggleMenu(!menuOpen)"
         [ngStyle]="{'color': getTextColor()}">
-        <span *ngIf="!menuOpen">contact me</span>
+        <span *ngIf="!menuOpen">get in touch</span>
         <span *ngIf="menuOpen">home</span>
     </p>
 </header>
@@ -109,7 +108,7 @@
         <a
             class="link"
             href="mailto:corbin.sykes@gmail.com"
-            target="_blank">
+            subject="Greetings and Salutations, Corbin!">
             <span class="fa fa-envelope-o"></span>
         </a>
 
