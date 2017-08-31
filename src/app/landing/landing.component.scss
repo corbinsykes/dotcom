@@ -5,13 +5,15 @@
 }
 
 .greeting {
-    margin-left: 12.5%;
+    margin-left: 6.25%;
     opacity: 1;
-    transition: opacity ($transition-timing * 2) ease-out;
+    animation: fadeInDown ($transition-timing * 2) ease-in;
 
     h1 {
         color: $white;
-        font: 60px/75px 'Oswald', sans-serif;
+        font-size: 3.5rem;
+        line-height: 4.375rem;
+        font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.25px;
         text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
@@ -28,6 +30,26 @@
 
     &.menu-open {
         opacity: 0;
+    }
+
+    @media (min-width: $screen-md) {
+        margin-left: 12.5%;
+
+        h1 {
+            font-size: 3.75rem;
+            line-height: 4.625rem;
+        }
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -48,18 +70,22 @@
 }
 
 .cursor {
-    height: 60px;
-    width: 2px;
+    height: 3.5rem;
+    width: 0.125rem;
     margin: 0.625rem 0 0 0.25rem;
     background-color: $white;
 
     &.is-blinking {
         animation: 1s blink step-end infinite;
     }
+
+    @media (min-width: $screen-md) {
+        height: 3.75rem;
+    }
 }
 
-@keyframes "blink" {
-    from, to {
+@keyframes blink {
+    0%, 100% {
         background-color: $transparent;
     }
     50% {

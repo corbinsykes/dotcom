@@ -1,30 +1,63 @@
 <div
     class="menu"
+    [ngClass]="{'is-open': menuOpen}"
     *ngIf="menuOpen">
-    <div class="u-centerXY u-column">
-        <div class="work">
-            <div
-                class="active"
-                [style.backgroundColor]="getTextColor()"></div>
-            <h1>ghostface ipsum</h1>
+    <div class="u-flex u-column">
+        <div
+            class="work"
+            [@itemAnimation]="'first'">
+            <a
+                class="link"
+                href="mailto:corbin.sykes@gmail.com"
+                subject="Greetings and Salutations, Corbin!"
+                target="_blank">
+                <div
+                    class="active"
+                    [style.backgroundColor]="getTextColor()">
+                </div>
+                <h1>email</h1>
+            </a>
         </div>
-        <div class="work">
-            <div
-                class="active"
-                [style.backgroundColor]="getTextColor()"></div>
-            <h1>still in the league</h1>
+        <div
+            class="work"
+            [@itemAnimation]="'second'">
+            <a
+                class="link"
+                href="http://www.linkedin.com/in/corbinsykes"
+                target="_blank">
+                <div
+                    class="active"
+                    [style.backgroundColor]="getTextColor()">
+                </div>
+                <h1>linkedin</h1>
+            </a>
         </div>
-        <div class="work">
-            <div
-                class="active"
-                [style.backgroundColor]="getTextColor()"></div>
-            <h1>project unity</h1>
+        <div
+            class="work"
+            [@itemAnimation]="'third'">
+            <a
+                class="link"
+                href="tel:1-216-386-1880">
+                <div
+                    class="active"
+                    [style.backgroundColor]="getTextColor()">
+                </div>
+                <h1>phone</h1>
+            </a>
         </div>
-        <div class="work">
-            <div
-                class="active"
-                [style.backgroundColor]="getTextColor()"></div>
-            <h1>hexadecimal time</h1>
+        <div
+            class="work"
+            [@itemAnimation]="'fourth'">
+            <a
+                class="link"
+                href="http://twitter.com/Corbin_Elliott"
+                target="_blank">
+                <div
+                    class="active"
+                    [style.backgroundColor]="getTextColor()">
+                </div>
+                <h1>twitter</h1>
+            </a>
         </div>
     </div>
 </div>
@@ -35,8 +68,8 @@
     <p
         (click)="toggleMenu(!menuOpen)"
         [ngStyle]="{'color': getTextColor()}">
-        <span *ngIf="!menuOpen">open</span>
-        <span *ngIf="menuOpen">close</span>
+        <span *ngIf="!menuOpen">contact me</span>
+        <span *ngIf="menuOpen">home</span>
     </p>
 </header>
 
@@ -50,7 +83,7 @@
 </article>
 
 <footer class="footer">
-    <p>&#xa9; 2017 heart</p>
+    <p>&#xa9; 2017</p>
     <div class="u-flex">
         <a
             class="link"
